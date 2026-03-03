@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming for Problem Solving by Dr. Sandeep Ranjan</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f0f0f0; }
+    .slide {
+      display: none;
+      padding: 50px;
+      font-size: 24px;
+      border: 2px solid #333;
+      margin: 20px auto;
+      width: 60%;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .active { display: block; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+    a { display: block; margin-top: 20px; color: blue; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <h1>Programming for Problem Solving by Dr. Sandeep Ranjan</h1>
+
+  <div class="slide active">
+    <p>Slide 1: Welcome to PPS Notes</p>
+  </div>
+
+  <div class="slide">
+    <p>Slide 2: Programming for Problem Solving</p>
+    <a href="https://drive.google.com/drive/u/1/folders/1P9FHFE_MqsYZwIoEDnhcyW2eHrlzJAaM">Learn C Programming Notes by Dr. Sandeep Ranjan</a>
+  </div>
+
+  <div class="slide">
+    <p>Slide 3: Programming for Problem Solving</p>
+    <a href="https://drive.google.com/drive/u/1/folders/1P9FHFE_MqsYZwIoEDnhcyW2eHrlzJAaM">Learn C Programming</a>
+  </div>
+
+  <div class="slide">
+    <p>Slide 4: Programming for Problem Solving</p>
+    <a href="https://drive.google.com/drive/u/1/folders/1P9FHFE_MqsYZwIoEDnhcyW2eHrlzJAaM/">Learn C Programming Notes </a>
+  </div>
+
+  <div class="slide">
+    <p>Slide 5: Thank You!</p>
+    <a href="https://drive.google.com/drive/u/1/folders/1P9FHFE_MqsYZwIoEDnhcyW2eHrlzJAaM/">PPS Notes</a>
+  </div>
+
+  <br>
+  <button onclick="prevSlide()">Previous</button>
+  <button onclick="nextSlide()">Next</button>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+  </script>
+
+</body>
+</html>
